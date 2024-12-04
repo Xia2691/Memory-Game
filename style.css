@@ -1,0 +1,189 @@
+/* Reset CSS - Basic Reset for Cross-Browser Consistency */
+
+/* Box-sizing: border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default styles for common HTML elements */
+html,
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  text-size-adjust: 100%;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default hyperlink styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove table border spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset form inputs and textareas */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* Allow images to fill container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset the default styling for form elements */
+button,
+select {
+  cursor: pointer;
+}
+
+/* Ensure that all elements have a defined display type */
+body {
+  display: block;
+}
+
+/* Remove default background on HTML elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  background: none;
+}
+
+/* <--------------------------------------------> */
+
+/* Here is my modifications */
+/* <--------------------------------------------> */
+
+body {
+  background-image: url('background.jpg');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0 80px;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 600px;
+  flex-wrap: wrap;
+  border: 2px solid #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  background-image: url('cards.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 120px;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  color: transparent; /* Text hidden initially */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card.flipped {
+  background-color: green; /* Green background when flipped */
+  background-image: none; /* Remove the card image */
+  color: white; /* Make text visible */
+}
+
+.card .card-content {
+  visibility: hidden; /* Initially hide the text */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card.flipped .card-content {
+  visibility: visible; /* Show the text when flipped */
+  opacity: 1;
+}
+
+
+/* Win and Lose Messages */
+.win-message,
+.lose-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 2rem;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Mistake Counter */
+.counter {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #ff2222;
+}
+
+/* Restart Button */
+#restartButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #9e3515;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#restartButton:hover {
+  background-color: #47140c;
+}

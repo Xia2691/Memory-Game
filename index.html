@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="icon" href="/brain.png" type="image/png">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Mistake Counter -->
+   <div class="counter" >MAX MISTAKE:12</div>
+  <div id="mistakeCounter" class="counter">Mistake:0</div>
+  <!-- Restart Button -->
+  <button id="restartButton" class="restart-button">Restart Game</button>
+
+  <div class="game-container">
+    <div class="card" data-card="A">
+      <div class="card-content"><span class="icon-user"></span></div>
+    </div>
+    <div class="card" data-card="B">
+      <div class="card-content"><span class="icon-map"></span></div>
+    </div>
+    <div class="card" data-card="A">
+      <div class="card-content"><span class="icon-user"></span></div>
+    </div>
+    <div class="card" data-card="B">
+      <div class="card-content"><span class="icon-map"></span></div>
+    </div>
+
+    <div class="card" data-card="C">
+      <div class="card-content"><span class="icon-trophy"></span></div>
+    </div>
+    <div class="card" data-card="D">
+      <div class="card-content"><span class="icon-energy"></span></div>
+    </div>
+    <div class="card" data-card="C">
+      <div class="card-content"><span class="icon-trophy"></span></div>
+    </div>
+    <div class="card" data-card="D">
+      <div class="card-content"><span class="icon-energy"></span></div>
+    </div>
+
+    <div class="card" data-card="E">
+      <div class="card-content"><span class="icon-fire"></span></div>
+    </div>
+    <div class="card" data-card="F">
+      <div class="card-content"><span class="icon-anchor"></span></div>
+    </div>
+    <div class="card" data-card="E">
+      <div class="card-content"><span class="icon-fire"></span></div>
+    </div>
+    <div class="card" data-card="F">
+      <div class="card-content"><span class="icon-anchor"></span></div>
+    </div>
+  </div>
+
+  <!-- Win Message -->
+  <div id="winMessage" class="win-message">You Win! <span class="icon-trophy"></span></div>
+
+  <!-- Lose Message -->
+  <div id="loseMessage" class="lose-message">You are <span class="icon-ghost"></span></div>
+
+  <!-- Restart Button -->
+  <button id="restartButton" style="display: none;">Restart</button>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
